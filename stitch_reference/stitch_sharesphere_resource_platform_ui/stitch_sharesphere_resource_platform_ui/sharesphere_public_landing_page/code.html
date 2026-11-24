@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>ShareSphere - Circular Resource Sharing</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#002d1c", "on-surface": "#131b2e", "primary-fixed-dim": "#a5d0b9", "outline": "#717973", "secondary-fixed-dim": "#4edea3", "surface-container-lowest": "#ffffff", "secondary": "#006c49", "surface-tint": "#3f6653", "surface-container": "#eaedff", "surface-dim": "#d2d9f4", "on-secondary-container": "#00714d", "outline-variant": "#c1c8c2", "secondary-fixed": "#6ffbbe", "surface": "#faf8ff", "on-surface-variant": "#414844", "on-secondary": "#ffffff", "primary": "#012d1d", "on-error-container": "#93000a", "on-background": "#131b2e", "background": "#faf8ff", "on-secondary-fixed-variant": "#005236", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#005137", "error": "#ba1a1a", "surface-container-low": "#f2f3ff", "on-tertiary-fixed": "#002114", "tertiary-fixed": "#85f8c4", "on-secondary-fixed": "#002113", "on-primary-fixed": "#002114", "error-container": "#ffdad6", "surface-container-highest": "#dae2fd", "inverse-surface": "#283044", "on-error": "#ffffff", "on-tertiary": "#ffffff", "inverse-primary": "#a5d0b9", "surface-variant": "#dae2fd", "tertiary-container": "#00452e", "primary-container": "#1b4332", "tertiary-fixed-dim": "#68dba9", "secondary-container": "#6cf8bb", "surface-container-high": "#e2e7ff", "inverse-on-surface": "#eef0ff", "surface-bright": "#faf8ff", "on-primary-fixed-variant": "#274e3d", "primary-fixed": "#c1ecd4", "on-tertiary-container": "#43ba8a", "on-primary-container": "#86af99" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-2xl": "3rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-sm": "0.75rem", "space-2xs": "0.25rem", "margin-mobile": "1rem", "margin": "2rem", "space-xs": "0.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "badge-micro": ["Plus Jakarta Sans"], "display-stat-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-stat": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "badge-micro": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-stat-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "display-stat": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin flex items-center justify-between"><a class="flex items-center gap-space-xs group" data-path="platform-overview" href="#"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-secondary-fixed transition-transform group-hover:scale-95"><span class="material-symbols-outlined text-[24px]">change_circle</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">ShareSphere</span><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary">Circular Network</span></div></a><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="platform-overview" href="#">Platform Overview</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-it-works" href="#">How It Works</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="available-resources" href="#">Available Resources</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="impact-and-metrics" href="#">Impact &amp; Metrics</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center h-10 px-space-md rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="sign-in" href="#">Sign In</a><a class="inline-flex items-center justify-center h-10 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] hover:bg-primary transition-all" data-path="register" href="#">Register</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-160px)]"><div class="flex flex-col w-full">
+<!-- Subtle ambient decorative glow (contained) -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 right-1/4 w-[600px] h-[600px] bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-96 -left-32 w-[480px] h-[480px] bg-surface-container-high/60 rounded-full blur-2xl pointer-events-none -z-10"></div>
+<!-- 1. HERO SECTION -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Hero Column -->
+<div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-space-md">
+<!-- Civic Endorsement Tag -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-low text-secondary shadow-sm mb-space-md">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Municipal Circular Infrastructure v2.4</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</div>
+<!-- Hero Headline -->
+<h1 class="font-headline-xl text-headline-xl md:text-[44px] md:leading-[52px] font-bold text-primary tracking-tight mb-space-md">
+            Turn Community Surplus into <span class="text-secondary">Local Impact.</span>
+</h1>
+<!-- Hero Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-lg">
+            A smart circular resource exchange connecting donors, verified community recipients, and volunteer couriers to eliminate municipal waste and bridge essential needs.
+          </p>
+<!-- Dual CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm mb-space-xl w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-xl bg-primary-container text-on-primary font-label-md text-label-md shadow-md hover:bg-primary transition-all active:scale-[0.99]" data-path="register" href="#">
+<span>Join ShareSphere</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container hover:text-primary transition-all" data-path="available-resources" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">inventory_2</span>
+<span>Explore Available Resources</span>
+</a>
+</div>
+<!-- Trust Badges Strip -->
+<div class="w-full pt-space-md flex flex-wrap items-center gap-y-2 gap-x-4 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">recycling</span>
+<span class="font-semibold text-on-surface">14.2 Tons</span> diverted
+            </div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">chevron_forward</span>
+<span class="font-semibold text-on-surface">520+</span> Active Allocations
+            </div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span class="font-semibold text-on-surface">100%</span> Verified Rehoming
+            </div>
+</div>
+</div>
+<!-- Right Hero Visual / Interactive Preview Card -->
+<div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+<!-- Background angled accent -->
+<div class="absolute -inset-2 bg-gradient-to-tr from-secondary-container/40 to-surface-container-highest/50 rounded-2xl -rotate-1 blur-sm -z-10"></div>
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-xl p-space-lg">
+<!-- Card Header: Dispatch Terminal -->
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Live Civic Exchange Node</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-secondary font-badge-micro text-badge-micro font-bold uppercase tracking-wider">
+                District #04 Active
+              </span>
+</div>
+<!-- Primary Metric Callout in UI Mockup -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-md flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Circularity Index</span>
+<span class="font-display-stat text-display-stat font-bold text-primary">94.8%</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> Zero-waste trajectory
+                </span>
+</div>
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest flex items-center justify-center p-2 shadow-sm">
+<!-- Inline SVG Circular Gauge -->
+<svg class="w-full h-full text-secondary" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="94.8, 100" stroke-linecap="round" stroke-width="3.5"></path>
+<text class="font-headline-sm text-[8px] font-bold fill-primary text-anchor-middle" text-anchor="middle" x="18" y="21">95%</text>
+</svg>
+</div>
+</div>
+<!-- Live Resource Ticker -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Active Logistics Stream</span>
+<!-- Ticker item 1 -->
+<div class="p-space-xs rounded-lg bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">nutrition</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block leading-tight">Food Surplus Crated</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Metro Grocers -&gt; Haven Shelter</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">In Transit</span>
+</div>
+<!-- Ticker item 2 -->
+<div class="p-space-xs rounded-lg bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">devices</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block leading-tight">Tech Hardware Escrow</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">18 Core i5 Laptops Refurbished</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Matched</span>
+</div>
+<!-- Ticker item 3 -->
+<div class="p-space-xs rounded-lg bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block leading-tight">Sanitized Care Packs</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">45 Thermal Bedding Sets</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Scheduled</span>
+</div>
+</div>
+<!-- Courier Geofence Stamp -->
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">fmd_good</span>
+                34 Couriers Active in Sector 4
+              </span>
+<span class="text-primary font-semibold">Live GPS Handoff</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. REAL-TIME IMPACT METRICS STRIP -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Metric Card 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Community Members</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="mb-space-xs">
+<span class="font-display-stat text-display-stat font-bold text-primary tracking-tight">1,428</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">+12%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs last month growth</span>
+</div>
+</div>
+<!-- Metric Card 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Landfill Diversion</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">eco</span>
+</div>
+</div>
+<div class="mb-space-xs">
+<span class="font-display-stat text-display-stat font-bold text-primary tracking-tight">14.2 <span class="text-headline-md font-semibold text-secondary">Tons</span></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">38.4 MT</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">CO₂e eliminated</span>
+</div>
+</div>
+<!-- Metric Card 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Documented Donations</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+</div>
+</div>
+<div class="mb-space-xs">
+<span class="font-display-stat text-display-stat font-bold text-primary tracking-tight">864</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">100% Tax-logged</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">audited receipts</span>
+</div>
+</div>
+<!-- Metric Card 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Logistics Handoff Rate</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<div class="mb-space-xs">
+<span class="font-display-stat text-display-stat font-bold text-primary tracking-tight">99.2%</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">&lt; 4 hr</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">avg pickup window</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. HOW IT WORKS (FOUR-PILLAR WORKFLOW) -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-2xl">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-badge-micro text-badge-micro uppercase tracking-widest text-secondary font-bold mb-space-xs block">Operational Blueprint</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight mb-space-xs">Four Pillars of Circular Distribution</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Engineered for institutional reliability: matching surplus with urgent human need through an automated dispatch protocol.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
+<!-- Step 1 Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-space-md group-hover:scale-105 transition-transform">
+            1
+          </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs font-bold">Donors Share Surplus</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Individuals and commercial businesses log surplus inventory, declare shelf-life, and earn verifiable landfill diversion credits.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">qr_code_scanner</span>
+<span>Batch Manifest Created</span>
+</div>
+</div>
+<!-- Step 2 Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-space-md group-hover:scale-105 transition-transform">
+            2
+          </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs font-bold">Verified Allocation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Our automated triage pairing engine prioritizes distribution to verified local non-profits and families based on need urgency (Levels 1-5).
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Algorithmic Matching</span>
+</div>
+</div>
+<!-- Step 3 Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-space-md group-hover:scale-105 transition-transform">
+            3
+          </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs font-bold">Courier Dispatch</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Vetted volunteer couriers claim proximity-based transport routes, complete geofenced pickups, and log cold-chain integrity.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>Geofenced Transit</span>
+</div>
+</div>
+<!-- Step 4 Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-space-md group-hover:scale-105 transition-transform">
+            4
+          </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs font-bold">Recipient Delivery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Shelters, community kitchens, and schools receive goods with transparent digital custody logs and zero financial barrier.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>Digital Chain-of-Custody</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. LIVE SURPLUS INVENTORY PREVIEW -->
+<section class="w-full bg-surface-container py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-secondary font-label-sm text-label-sm font-semibold mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">sensors</span> Real-Time Feeds
+            </div>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold">Featured Resource Lots</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Allocations currently open for municipal non-profit requisition.</p>
+</div>
+<a class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold hover:text-secondary transition-colors" data-path="available-resources" href="#">
+<span>View Full 42-Item Catalog</span>
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Inventory Item 1: Food Surplus -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Neatly packed wooden crates filled with vibrant organic crisp green apples, leafy romaine lettuce, and farm fresh vegetables in a clean community warehouse under daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF2t_fQj2XeNNGXYI8W6bFPlEsaCoPxCJ_uXYB6qmi9bzWmFPuCBpygrIYeJp0wKj9x9mWu7mk-tM-UAGPoARz2jJRwFeR1M3Lxi-ibh9KcxtdsLM3FWyVvj1-cvpbUI1u27T235Jnb1ezHrQCQLzKfR1atHoil1K0qJsuK3yT9cFYCAD3td-Yxmkf7lvnHWx0QqOY-SULkwJwKW7I79NBkF4CeSwkObA_HoJWON3P"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-lowest text-primary font-badge-micro text-badge-micro font-bold uppercase tracking-wider shadow-sm">
+                  Hub #04 Central
+                </span>
+</div>
+<div class="absolute top-3 right-3">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  High Urgency
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Perishable / Cold Storage</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold mt-1 mb-space-xs">Organic Produce &amp; Perishables</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Fresh harvest batch donated by regional wholesale co-op. Graded Grade-A, optimal for distribution within 36 hours.
+                </p>
+</div>
+<div>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md">Available: <span class="font-bold">25 Crates (310 kg)</span></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Triage Score: 4.9</span>
+</div>
+<button class="w-full py-2.5 px-space-md rounded-xl bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+<span>Claim for Verified NGO</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Inventory Item 2: Refurbished Laptops -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Refurbished minimalist modern laptops neatly stacked and arranged on a clean wooden workshop table with digital testing devices and cable ties visible in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPMo06Fj_IoVtSBlV0OC2NykyUl2AvZrZ4qfcMNplTRnTGVspCPA4ByCjtWfIp4XOz8tY9ZV2PgDLecaBXK1SkoBxO3nM-4nlVJzspHLmATvs1oD5H4mEmJMbIOko5YytcUhRxpCoMPj6W4nF8oKPUKCWRcddwXAY5sY-Jj_arQ_va73qe-A4tVl1SpnnBkWuoBCN8riciknmVfUmIPA4D6Lua0zwP2qlL_y5eSyEQ"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-lowest text-primary font-badge-micro text-badge-micro font-bold uppercase tracking-wider shadow-sm">
+                  Hub #04 Tech
+                </span>
+</div>
+<div class="absolute top-3 right-3">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Education Priority
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Educational Hardware</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold mt-1 mb-space-xs">Student Laptops &amp; Peripherals</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Cleaned, reset, and battery-benchmarked corporate workstations pre-imaged with open-source educational software.
+                </p>
+</div>
+<div>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md">Available: <span class="font-bold">18 Workstations</span></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Triage Score: 4.7</span>
+</div>
+<button class="w-full py-2.5 px-space-md rounded-xl bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+<span>Claim for Verified NGO</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Inventory Item 3: Winter Thermal Gear -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Stacked stacks of thick insulated fleece winter blankets and heavy duty thermal parkas bundled with clean recycling bands in an organized humanitarian storage area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBSiDcmWhQWQ1pRzh9ZjuUCIDFhb0C6jE-Ev7CxD3EV9eC-_q2gAYc9IudtGUzdaRgaSUGKXI1OwME0fMkrbe6yACVgXmH4Q8HGOWkkSt4ExOtBVyOEhbvRpuaxH26C0WDBoqMUhzDfRAnuueOGjf7TrRpfanFiyJt920NOFmPiHbNkpc7XYUjXdsE8e13P_naqaoLTrvzN1s7wJ0gJAPk7aQD_6gjPIwnlaZPvcBP"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-lowest text-primary font-badge-micro text-badge-micro font-bold uppercase tracking-wider shadow-sm">
+                  Hub #04 South
+                </span>
+</div>
+<div class="absolute top-3 right-3">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Weather Urgent
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Emergency Supplies</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold mt-1 mb-space-xs">Thermal Blankets &amp; Winter Coats</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Sanitized, inspected, and categorized thermal fleece blankets and weather-resistant coats from retail deadstock.
+                </p>
+</div>
+<div>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md">Available: <span class="font-bold">45 Bundled Units</span></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Triage Score: 4.8</span>
+</div>
+<button class="w-full py-2.5 px-space-md rounded-xl bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+<span>Claim for Verified NGO</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. ROLE-BASED ONBOARDING CALLOUTS -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-2xl">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-badge-micro text-badge-micro uppercase tracking-widest text-secondary font-bold mb-space-xs block">Stakeholder Portals</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight mb-space-xs">Tailored Tools for Every Circular Role</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          ShareSphere provides customized dashboards and security permissions mapped precisely to your participation profile.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Role 1: Donors -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">storefront</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">For Surplus Donors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Commercial businesses and citizens redirect inventory loss into social good with instant proof.
+            </p>
+<ul class="flex flex-col gap-2 mb-space-lg text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Clear deadstock fast
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Automatic carbon offset logs
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Tax-deductible manifests
+              </li>
+</ul>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold text-center hover:bg-surface-container transition-all" data-path="register" href="#">
+            Join as Donor
+          </a>
+</div>
+<!-- Role 2: Recipients & NGOs -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">foundation</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">For Community Shelters</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Non-profits, shelters, and food banks secure vital supplies with zero procurement expense.
+            </p>
+<ul class="flex flex-col gap-2 mb-space-lg text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Priority intake requests
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Real-time courier ETA tracking
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Zero-cost resource allocation
+              </li>
+</ul>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold text-center hover:bg-surface-container transition-all" data-path="register" href="#">
+            Apply as Recipient
+          </a>
+</div>
+<!-- Role 3: Volunteer Couriers -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">pedal_bike</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">For Volunteer Couriers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Mobilize civic transport via bicycle, EV, or foot to fulfill hyper-local delivery drops.
+            </p>
+<ul class="flex flex-col gap-2 mb-space-lg text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Claim nearby micro-routes
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Geofenced pickup validation
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Civic service merit credentials
+              </li>
+</ul>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold text-center hover:bg-surface-container transition-all" data-path="register" href="#">
+            Enroll as Courier
+          </a>
+</div>
+<!-- Role 4: Municipal Administrators -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">admin_panel_settings</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">For Civic Overseers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              City sustainability directors track aggregate diversion, food security, and safety compliance.
+            </p>
+<ul class="flex flex-col gap-2 mb-space-lg text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Sector-wide logistics heatmaps
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Audit-ready ESG reports
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+                Disaster surge coordination
+              </li>
+</ul>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold text-center hover:bg-surface-container transition-all" data-path="platform-overview" href="#">
+            Civic Credentials
+          </a>
+</div>
+</div>
+</section>
+<!-- 6. TRUST, COMPLIANCE & CALL TO ACTION BANNER -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin pb-space-2xl">
+<div class="w-full bg-primary-container rounded-3xl p-space-xl md:p-space-2xl text-on-primary relative overflow-hidden shadow-xl">
+<!-- Background subtle graphics -->
+<div class="absolute right-0 bottom-0 translate-x-12 translate-y-12 w-96 h-96 rounded-full bg-secondary-fixed/10 pointer-events-none blur-2xl"></div>
+<div class="absolute top-0 right-1/3 w-64 h-64 rounded-full bg-secondary/15 pointer-events-none blur-3xl"></div>
+<div class="relative z-10 max-w-3xl flex flex-col items-start">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold mb-space-md">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>Zero-Waste Municipal Framework</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl md:text-[38px] md:leading-[46px] font-bold text-on-primary mb-space-sm">
+            Ready to build a resilient, zero-waste community?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl mb-space-xl">
+            Choose your role in under 2 minutes. Connect with verified regional resource loops, schedule scheduled pickups, or register your organization for direct supply.
+          </p>
+<!-- Interactive Role Selector CTA Switch -->
+<div class="w-full max-w-xl bg-tertiary-container/60 p-1.5 rounded-2xl flex flex-wrap sm:flex-nowrap gap-1.5 mb-space-md">
+<a class="flex-1 py-3 px-space-xs rounded-xl bg-surface-container-lowest text-primary text-center font-label-md text-label-md font-bold shadow-sm transition-all hover:bg-surface" data-path="register" href="#">
+              Donor Portal
+            </a>
+<a class="flex-1 py-3 px-space-xs rounded-xl text-on-primary hover:bg-primary/50 text-center font-label-md text-label-md font-semibold transition-all" data-path="register" href="#">
+              Recipient NGO
+            </a>
+<a class="flex-1 py-3 px-space-xs rounded-xl text-on-primary hover:bg-primary/50 text-center font-label-md text-label-md font-semibold transition-all" data-path="register" href="#">
+              Volunteer Courier
+            </a>
+</div>
+<!-- Assurance Footnote -->
+<div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-on-primary-container font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">shield</span>
+              Municipal Identity Verification
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">lock</span>
+              Encrypted Chain-of-Custody
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">bolt</span>
+              Instant Activation
+            </span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Micro-interaction for role button hover feedback
+  document.querySelectorAll('[data-path]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Allows simulated interaction preview without breaking mock navigation
+      const dest = this.getAttribute('data-path');
+      console.log('Navigating to:', dest);
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-2xl"><div class="md:col-span-5 flex flex-col items-start"><div class="flex items-center gap-space-xs mb-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-secondary-fixed"><span class="material-symbols-outlined text-[18px]">change_circle</span></div><span class="font-headline-sm text-headline-sm text-primary">ShareSphere</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-md">An open-access urban infrastructure platform accelerating regional zero-waste transitions through verifiable material loops and community sharing hubs.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface">Municipal Verification Credential: #CIV-2024-88A</span></div></div><div class="md:col-span-2 flex flex-col gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold mb-space-2xs">Architecture</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="platform-overview" href="#">Platform Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-it-works" href="#">How It Works</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="available-resources" href="#">Resource Catalog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="impact-and-metrics" href="#">Impact Analytics</a></div><div class="md:col-span-2 flex flex-col gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold mb-space-2xs">Governance</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Circular Protocols</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Civic Partner Charter</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Data Transparency</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Security &amp; Trust</a></div><div class="md:col-span-3 flex flex-col items-start"><div class="w-full p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><div class="flex items-center gap-space-xs mb-space-2xs"><span class="material-symbols-outlined text-secondary text-[20px]">eco</span><span class="font-label-md text-label-md text-on-surface font-semibold">Sustainability Mission</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Targeting 100,000 MT of diverted municipal solid goods via community stewardship by 2026.</p><div class="flex items-center justify-between w-full pt-space-xs"><span class="font-badge-micro text-badge-micro uppercase text-on-surface-variant">ISO 14044 Audited</span><span class="font-label-sm text-label-sm text-secondary font-bold">Verified Active</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 ShareSphere Systems Inc. Endorsed by Regional Circular Innovation Council.</p><div class="flex items-center gap-space-lg"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Civic Access</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cookie Directives</a></div></div></div></footer></body></html>

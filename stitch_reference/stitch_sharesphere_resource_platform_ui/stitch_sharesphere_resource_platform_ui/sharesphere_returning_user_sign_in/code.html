@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><title>ShareSphere - Authentication</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#002d1c", "on-surface": "#131b2e", "primary-fixed-dim": "#a5d0b9", "outline": "#717973", "secondary-fixed-dim": "#4edea3", "surface-container-lowest": "#ffffff", "secondary": "#006c49", "surface-tint": "#3f6653", "surface-container": "#eaedff", "surface-dim": "#d2d9f4", "on-secondary-container": "#00714d", "outline-variant": "#c1c8c2", "secondary-fixed": "#6ffbbe", "surface": "#faf8ff", "on-surface-variant": "#414844", "on-secondary": "#ffffff", "primary": "#012d1d", "on-error-container": "#93000a", "on-background": "#131b2e", "background": "#faf8ff", "on-secondary-fixed-variant": "#005236", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#005137", "error": "#ba1a1a", "surface-container-low": "#f2f3ff", "on-tertiary-fixed": "#002114", "tertiary-fixed": "#85f8c4", "on-secondary-fixed": "#002113", "on-primary-fixed": "#002114", "error-container": "#ffdad6", "surface-container-highest": "#dae2fd", "inverse-surface": "#283044", "on-error": "#ffffff", "on-tertiary": "#ffffff", "inverse-primary": "#a5d0b9", "surface-variant": "#dae2fd", "tertiary-container": "#00452e", "primary-container": "#1b4332", "tertiary-fixed-dim": "#68dba9", "secondary-container": "#6cf8bb", "surface-container-high": "#e2e7ff", "inverse-on-surface": "#eef0ff", "surface-bright": "#faf8ff", "on-primary-fixed-variant": "#274e3d", "primary-fixed": "#c1ecd4", "on-tertiary-container": "#43ba8a", "on-primary-container": "#86af99" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-2xl": "3rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-sm": "0.75rem", "space-2xs": "0.25rem", "margin-mobile": "1rem", "margin": "2rem", "space-xs": "0.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "badge-micro": ["Plus Jakarta Sans"], "display-stat-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-stat": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "badge-micro": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-stat-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "display-stat": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-center items-center"><main class="w-full flex-1 flex flex-col justify-center items-center px-margin-mobile md:px-margin py-space-xl"><div class="flex flex-col w-full max-w-6xl mx-auto my-auto items-center justify-center p-space-xs sm:p-space-md">
+<!-- Split Authentication Container -->
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[720px]">
+<!-- Left: Form Viewport (7 Cols on Large Viewports) -->
+<div class="lg:col-span-7 p-space-lg sm:p-space-xl lg:p-space-2xl flex flex-col justify-between bg-surface-container-lowest">
+<!-- Top Operational Status Bar -->
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[16px]">assured_workload</span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">CIVIC ACCESS &amp; AUTHENTICATION</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-secondary text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+<span>SYSTEM OPERATIONAL • CIVIC HUB 04</span>
+</div>
+</div>
+<!-- Heading & Narrative -->
+<div class="mt-space-md">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Welcome Back to ShareSphere</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs leading-relaxed max-w-xl">
+            Sign in to access your role-specific dashboard, manage allocations, and track community impact.
+          </p>
+</div>
+<!-- Role Quick-Selector / Context Segmented Bar -->
+<div class="mt-space-lg">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs">
+            Select Your Access Portal
+          </label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 rounded-xl bg-surface-container" id="roleSelectorGroup">
+<button class="role-btn active-role flex flex-col items-center justify-center py-2 px-2 rounded-lg text-center transition-all bg-surface-container-lowest text-primary shadow-sm" data-role="donor" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary mb-0.5">handshake</span>
+<span class="font-label-sm text-label-sm font-semibold truncate w-full">Resource Donor</span>
+</button>
+<button class="role-btn flex flex-col items-center justify-center py-2 px-2 rounded-lg text-center transition-all text-on-surface-variant hover:text-on-surface" data-role="ngo" type="button">
+<span class="material-symbols-outlined text-[18px] mb-0.5">diversity_3</span>
+<span class="font-label-sm text-label-sm truncate w-full">Community NGO</span>
+</button>
+<button class="role-btn flex flex-col items-center justify-center py-2 px-2 rounded-lg text-center transition-all text-on-surface-variant hover:text-on-surface" data-role="courier" type="button">
+<span class="material-symbols-outlined text-[18px] mb-0.5">electric_moped</span>
+<span class="font-label-sm text-label-sm truncate w-full">Volunteer Courier</span>
+</button>
+<button class="role-btn flex flex-col items-center justify-center py-2 px-2 rounded-lg text-center transition-all text-on-surface-variant hover:text-on-surface" data-role="admin" type="button">
+<span class="material-symbols-outlined text-[18px] mb-0.5">shield_person</span>
+<span class="font-label-sm text-label-sm truncate w-full">Civic Lead</span>
+</button>
+</div>
+</div>
+<!-- Authentication Form -->
+<form class="mt-space-lg space-y-space-md" onsubmit="event.preventDefault();">
+<!-- Identifier Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="civic-id">
+              Official Email or Civic ID
+            </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">badge</span>
+<input class="w-full h-11 pl-11 pr-4 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" id="civic-id" placeholder="e.g. david.sterling@organization.org" required="" type="text"/>
+</div>
+</div>
+<!-- Password Input -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block font-label-md text-label-md text-on-surface" for="master-password">
+                Master Password
+              </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Hardware Key Supported
+              </span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">lock</span>
+<input class="w-full h-11 pl-11 pr-11 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim tracking-wider" id="master-password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 text-outline hover:text-on-surface p-1 rounded transition-colors" id="togglePasswordBtn" type="button">
+<span class="material-symbols-outlined text-[20px]" id="pwdEyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Aux Controls: Remember device & Admin Contact Support -->
+<div class="flex flex-wrap items-center justify-between gap-y-2 pt-1">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input class="sr-only peer" id="remember-device" type="checkbox"/>
+<div class="w-4 h-4 rounded bg-surface-container peer-checked:bg-primary-container flex items-center justify-center text-on-primary transition-all">
+<span class="material-symbols-outlined text-[14px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Remember this device for 30 days</span>
+</label>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span>Forgot password? Contact Civic Admin</span>
+<span class="material-symbols-outlined text-[14px]">contact_support</span>
+</a>
+</div>
+<!-- Primary Sign In Button -->
+<button class="w-full h-12 mt-space-sm bg-primary-container hover:bg-tertiary-container text-on-primary font-headline-sm text-headline-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-[0.99]" type="submit">
+<span>Sign In to Dashboard</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative my-space-lg flex items-center justify-center">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute bg-surface-container-lowest px-3 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+            or authenticate with Civic Pass
+          </span>
+</div>
+<!-- Municipal SSO Secondary Action -->
+<button class="w-full h-11 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-xl transition-all flex items-center justify-center gap-2.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<span>Continue with Civic SSO / Municipal Identity</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-[10px] font-bold text-on-surface-variant tracking-wider uppercase">FIPS-201</span>
+</button>
+<!-- Registration Link -->
+<div class="mt-space-md text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+            New to ShareSphere? 
+            <a class="font-semibold text-secondary hover:underline ml-1" href="#">Create an Account →</a>
+</p>
+</div>
+</div>
+<!-- Compliance & Security Trust Badges -->
+<div class="pt-space-lg mt-space-lg bg-surface-container-lowest">
+<div class="flex flex-wrap items-center justify-between gap-y-2 text-on-surface-variant text-label-sm font-label-sm opacity-85">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">encrypted</span>
+<span>256-bit TLS Encrypted Ledger</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">policy</span>
+<span>Civic ID Standard v2.4</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">eco</span>
+<span>ISO 14044 Audited</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: High-Impact Forest Green Civic Hero Panel (5 Cols) -->
+<div class="lg:col-span-5 bg-primary-container text-on-primary p-space-lg sm:p-space-xl flex flex-col justify-between relative overflow-hidden">
+<!-- Ambient Visual Texture -->
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#6cf8bb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-secondary-container opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Top Branding in Panel -->
+<div class="relative z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-secondary-container flex items-center justify-center text-primary-container shadow-inner">
+<span class="material-symbols-outlined text-[22px]">nest_eco_leaf</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-primary tracking-tight">ShareSphere</span>
+<span class="font-label-sm text-[10px] text-primary-fixed uppercase tracking-wider">Ecological SaaS Network</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary text-secondary-fixed text-label-sm font-label-sm tracking-wide">
+            CIVIC HUB 04 ACTIVE
+          </span>
+</div>
+<!-- Overline & Hero Narrative -->
+<div class="mt-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-semibold">
+            SYSTEMIC CIRCULARITY &amp; RESOURCE FLOW
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary mt-2 leading-snug">
+            Connecting 1,400+ civic leaders with zero-waste distribution.
+          </h2>
+<p class="font-body-sm text-body-sm text-primary-fixed mt-space-xs leading-relaxed opacity-90">
+            Real-time triage matching, cold-chain verification, and carbon diversion metrics updated every 60 seconds across regional municipal wards.
+          </p>
+</div>
+<!-- Live Operations Metrics Display -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-lg">
+<div class="p-space-sm rounded-xl bg-tertiary/70 shadow-sm backdrop-blur-sm">
+<div class="flex items-center justify-between text-secondary-fixed-dim mb-1">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+</div>
+<span class="block font-headline-md text-headline-md text-on-primary">38 Couriers</span>
+<span class="font-label-sm text-label-sm text-primary-fixed opacity-80">Active Dispatch Fleet</span>
+</div>
+<div class="p-space-sm rounded-xl bg-tertiary/70 shadow-sm backdrop-blur-sm">
+<div class="flex items-center justify-between text-secondary-fixed-dim mb-1">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-[10px] text-secondary-container font-mono">+12.4%</span>
+</div>
+<span class="block font-headline-md text-headline-md text-on-primary">94.8% Match</span>
+<span class="font-label-sm text-label-sm text-primary-fixed opacity-80">Today's Diverted Lots</span>
+</div>
+</div>
+<!-- Verified Case Highlight Card -->
+<div class="mt-space-lg p-space-md rounded-xl bg-tertiary/90 shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1 text-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified Hub
+            </span>
+</div>
+<blockquote class="font-body-sm text-body-sm text-surface-bright leading-relaxed italic">
+            “ShareSphere streamlined our weekly surplus intake from 14 regional grocers. We verify deliveries in seconds and keep perishable food out of landfills.”
+          </blockquote>
+<div class="flex items-center gap-3 mt-space-md pt-space-xs">
+<img class="w-10 h-10 rounded-full object-cover shadow-inner" data-alt="Editorial profile portrait of Marcus Vance, a warm and focused logistics lead in an urban eco-center wearing a clean work uniform with warm sunlight and soft green background accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCldt7LQFEy16slDsZ2T-A08m8Z2j70gadQr1OGVlH3zLfdNuzS5VdZJ44TSkDafK3COKEz3VMnfYlNsiCIJlhvOT36D6Tct77cnV7mLlt2aXHCw3Ca4_6HE9DV_EdvDPiQXKEddznl8SaZr6SrCa_hcZI5njsiFbpXZzPEk2gDYcwM8-gVwu5YCeY3TRivmX_89Xq8_qGJFT3toDhBpd9NvIWEDGatULXR7aAw5giJ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[14px] text-on-primary truncate">Marcus Vance</span>
+<span class="font-label-sm text-label-sm text-primary-fixed truncate">Logistics Lead, Westside Food Pantry</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Panel Footer Metadata -->
+<div class="relative z-10 pt-space-lg mt-space-lg flex items-center justify-between text-primary-fixed opacity-75 font-label-sm text-label-sm">
+<span class="tracking-wide">Bay Area Circular Coalition Charter</span>
+<span class="font-mono">Protocol 2025.1</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Password Visibility Toggle Interaction
+  const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+  const passwordInput = document.getElementById('master-password');
+  const pwdEyeIcon = document.getElementById('pwdEyeIcon');
+
+  if (togglePasswordBtn && passwordInput && pwdEyeIcon) {
+    togglePasswordBtn.addEventListener('click', function() {
+      const isPassword = passwordInput.getAttribute('type') === 'password';
+      passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+      pwdEyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+    });
+  }
+
+  // Segmented Role Selector Switching
+  const roleButtons = document.querySelectorAll('.role-btn');
+  roleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      roleButtons.forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      });
+      this.classList.remove('text-on-surface-variant');
+      this.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+    });
+  });
+</script></main></body></html>

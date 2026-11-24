@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline":"#717973","secondary-fixed-dim":"#4edea3","secondary":"#006c49","inverse-primary":"#a5d0b9","on-primary":"#ffffff","on-tertiary-container":"#43ba8a","on-background":"#131b2e","tertiary-container":"#00452e","on-secondary-fixed-variant":"#005236","on-tertiary-fixed-variant":"#005137","on-surface":"#131b2e","on-error":"#ffffff","tertiary":"#002d1c","surface-container":"#eaedff","on-primary-fixed-variant":"#274e3d","on-secondary-container":"#00714d","primary":"#012d1d","surface-dim":"#d2d9f4","tertiary-fixed-dim":"#68dba9","outline-variant":"#c1c8c2","primary-fixed":"#c1ecd4","on-surface-variant":"#414844","on-tertiary":"#ffffff","error-container":"#ffdad6","on-error-container":"#93000a","on-tertiary-fixed":"#002114","surface-tint":"#3f6653","primary-fixed-dim":"#a5d0b9","inverse-on-surface":"#eef0ff","surface-container-highest":"#dae2fd","tertiary-fixed":"#85f8c4","error":"#ba1a1a","secondary-container":"#6cf8bb","inverse-surface":"#283044","primary-container":"#1b4332","background":"#faf8ff","surface-container-high":"#e2e7ff","on-secondary-fixed":"#002113","surface-variant":"#dae2fd","on-primary-fixed":"#002114","on-primary-container":"#86af99","surface":"#faf8ff","on-secondary":"#ffffff","surface-bright":"#faf8ff","surface-container-lowest":"#ffffff","surface-container-low":"#f2f3ff","secondary-fixed":"#6ffbbe"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"1rem","margin-mobile":"1rem","space-2xl":"3rem","space-xl":"2rem","space-xs":"0.5rem","space-md":"1rem","margin":"2rem","gutter":"1.5rem","space-sm":"0.75rem","space-2xs":"0.25rem","space-lg":"1.5rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"display-stat-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"badge-micro":["Plus Jakarta Sans"],"display-stat":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-stat-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"badge-micro":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display-stat":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 flex items-center gap-space-sm px-space-lg bg-surface-container-lowest"><img alt="ShareSphere Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBRDhZNb6GBfICdxuuLVDPExKuSEW2NyTPbkO4gld0TbesFP3b2-CPApwZkm6oblDHGRWE1eJZZEgzz0TSB4SynDcRfpZ4bO0p9vipOU1KzfdUQTp31lGWZ1s6gX5IMaZ-FfBDdXbcybJw2WxLLOD4xq8dLjl9HcPaguemfLCbK7Ha_j0tRKfYP6eyp31SHBYIuIW5-ZQvFgrsn8NiCDvZClt5Gn2Tsvxbo2CTcU5k_"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold leading-none tracking-tight">ShareSphere</span><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary mt-space-2xs">Resource Loop</span></div></div><nav class="flex-1 overflow-y-auto px-space-md py-space-md flex flex-col gap-space-lg" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="flex flex-col gap-space-2xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-2xs">Main Dashboard</span><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Analytics</span></a></div><div class="flex flex-col gap-space-2xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-2xs">Resource Sharing</span><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="donations" href="#"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-body-md text-body-md">Donations</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="available-resources" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Available Resources</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="allocations" href="#"><span class="material-symbols-outlined text-[20px]">sync_alt</span><span class="font-body-md text-body-md">Allocations</span></a></div><div class="flex flex-col gap-space-2xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-2xs">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pickups-and-deliveries" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-body-md text-body-md">Pickups &amp; Deliveries</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm" data-path="volunteer-tasks" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span class="font-body-md text-body-md">Volunteer Tasks</span></a></div><div class="flex flex-col gap-space-2xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-2xs">Community &amp; Settings</span><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="members" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-md text-body-md">Members</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Profile &amp; Settings</span></a></div></nav><div class="p-space-md bg-surface-container-low"><div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></div><div class="flex flex-col flex-1 min-w-0"><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Civic Hub 04</span><span class="font-badge-micro text-badge-micro text-secondary truncate">Network Operational</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-outline text-[20px]">search</span><input class="w-72 h-10 pl-9 pr-12 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all" placeholder="Search inventory, claims, hubs..." type="text"/><span class="absolute right-space-sm font-badge-micro text-badge-micro bg-surface-container-highest px-space-2xs py-0.5 rounded text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold"><span class="w-2 h-2 rounded-full bg-secondary"></span>System Admin</span></div><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgPnkwm6G1O2XkTuHo-N2G9VhLu0GKM161s-EkCl67s_Sgayiq5Mu7quPyVttYlZAXtxlLKUT_ktKqmaGJtKQ8rS-D7PPxIJQJbSd3qQo8gDe8_IPW6ApFsvoePS1Y7iSmd13JxklrVH6aGfOGmNSk1RSuVL5L118mUkGAz9cu_bOTfrA6rd3P7YgxR8YpqTN0SRVHhzLv3-xApk_QfIep5IyB0pAKjCmUFL26Z3Yl"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Elena Rostova</span><span class="font-label-sm text-label-sm text-outline">Coordinator</span></div></div><a class="flex items-center justify-center w-8 h-8 rounded-lg text-outline hover:text-error hover:bg-error-container/20 transition-colors" href="#" title="Logout"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></header><main class="w-full pt-16 px-space-xl py-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Status Bar -->
+<div class="w-full flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary font-bold">Field Operations Fleet</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-outline">Civic Region #04</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Volunteer Logistics &amp; Task Dispatch</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Live routing, verified pickups, and chain-of-custody transfer execution.</p>
+</div>
+<!-- Live Operator Status & Milestone Pill -->
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Status Duty Switcher -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="relative flex items-center">
+<input checked="" class="sr-only peer" id="duty-toggle" onchange="toggleDuty(this)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5" id="duty-label">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse" id="duty-dot"></span>
+            Active on Duty
+          </span>
+<span class="font-label-sm text-label-sm text-outline">Available for Pickups &amp; Drops</span>
+</div>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="flex items-center gap-space-lg bg-surface-container-lowest px-space-lg py-space-xs rounded-xl shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Completed Deliveries</span>
+<span class="font-display-stat text-display-stat leading-none text-primary mt-1">56</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Gold Courier</span>
+<span class="font-badge-micro text-badge-micro text-secondary font-semibold">Top 3% Contributor</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Metrics Ticker -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Assigned Today</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-stat text-display-stat leading-none text-primary">5</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary flex items-center">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 2 In Progress
+        </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Est. Carbon Diverted</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">eco</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-stat text-display-stat leading-none text-primary">142<span class="font-headline-sm text-headline-sm text-outline font-normal ml-0.5">kg</span></span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">+18% this wk</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Route Distance</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">route</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-stat text-display-stat leading-none text-primary">18.4<span class="font-headline-sm text-headline-sm text-outline font-normal ml-0.5">mi</span></span>
+<span class="font-label-sm text-label-sm text-outline">Optimized run</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Punctuality Score</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">timer</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-stat text-display-stat leading-none text-primary">99.2%</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">Verified</span>
+</div>
+</div>
+</div>
+<!-- Interactive Task Navigation Tabs -->
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded-xl shadow-sm">
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold bg-primary-container text-on-primary shadow-sm transition-all" id="tab-all" onclick="switchTab('all')">
+        All Assignments <span class="ml-1 opacity-80">(5)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="tab-pickup" onclick="switchTab('pickup')">
+        Pickup Tasks <span class="ml-1 opacity-70">(2)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="tab-delivery" onclick="switchTab('delivery')">
+        Delivery Tasks <span class="ml-1 opacity-70">(3)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="tab-completed" onclick="switchTab('completed')">
+        Completed Log
+      </button>
+</div>
+<!-- Quick Dispatch Utility -->
+<div class="hidden md:flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-space-md py-space-xs bg-surface-container-lowest text-on-surface rounded-lg shadow-sm font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+        Filter by Route
+      </button>
+<button class="flex items-center gap-1.5 px-space-md py-space-xs bg-primary text-on-primary rounded-lg shadow-sm font-label-md text-label-md hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_location_alt</span>
+        Claim Urgent Task
+      </button>
+</div>
+</div>
+<!-- Active Task Cards & Execution Board -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg mb-space-2xl">
+<!-- TASK CARD 1: PICKUP TASK -->
+<div class="task-card pickup bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-all" id="card-pickup-1">
+<div>
+<!-- Card Top Bar: Badges & Window -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              Ready for Pickup
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-badge-micro text-badge-micro text-on-surface-variant uppercase tracking-wider">
+              Perishable Produce
+            </span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm font-medium text-outline bg-surface-container-low px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>Target: 2:00 PM - 3:30 PM</span>
+</div>
+</div>
+<!-- Cargo Item Title & Photo Context -->
+<div class="flex items-start gap-space-md mb-space-md">
+<img class="w-20 h-20 rounded-lg object-cover flex-shrink-0 bg-surface-container" data-alt="Neatly packed wooden crates and cartons filled with fresh organic vegetables and artisan bakery bread ready for community distribution inside a sunlit hub" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtU5F00ERIZV03qmTnlJmn1cpPJutiMZwPQBOeOYwqw1YElo22Lqeg4j2x5tQWbuTa0SAddg4wE6Tjh1AAeYxnmt6exoAwJyrD-kWkDdpfKzPebNwy3DstJglZUXMciEB2Erfzape31C8k6p-XmgQ7nd0GpGjxYeZidjVs76g79FkHji21PP15OntarVBFWsv9sY64m93IlKNVReEWr-jzsa3HfaMXYLuCS78iuucf"/>
+<div class="flex-1 min-w-0">
+<h2 class="font-headline-md text-headline-md text-primary font-bold truncate">25 Boxes of Organic Produce &amp; Bakery</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Approx. 340 lbs total • Requires climate care • Pre-sorted into family crates.</p>
+<div class="flex items-center gap-space-xs mt-2">
+<span class="font-badge-micro text-badge-micro bg-secondary-container/30 text-on-secondary-fixed-variant px-1.5 py-0.5 rounded font-semibold">Cold Storage Ready</span>
+<span class="font-badge-micro text-badge-micro bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded font-semibold">Batch #WP-891</span>
+</div>
+</div>
+</div>
+<!-- Waypoint Details & Direct Contacts -->
+<div class="bg-surface-container-low p-space-md rounded-lg mb-space-md flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">storefront</span>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Pickup Facility</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Westside Community Pantry</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">442 Market St., Bay #2 (Loading Dock North)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Marcus Vance (Logistics Lead)</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold hover:underline" href="tel:5550192831">
+<span class="material-symbols-outlined text-[16px]">call</span>
+              +1 (555) 019-2831
+            </a>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-xs flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<button class="font-label-md text-label-md text-outline hover:text-error transition-colors flex items-center gap-1" onclick="reportIssuePrompt('Westside Community Pantry')">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+          Report Issue / Reschedule
+        </button>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-lg py-2.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-semibold hover:bg-primary-container active:scale-95 transition-all shadow-sm" onclick="completePickup(this)">
+<span class="material-symbols-outlined text-[18px]">check_box</span>
+          Mark as Picked Up
+        </button>
+</div>
+</div>
+<!-- TASK CARD 2: DELIVERY TASK -->
+<div class="task-card delivery bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-all" id="card-delivery-2">
+<div>
+<!-- Card Top Bar: Badges & Destination -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              Out for Delivery
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-badge-micro text-badge-micro text-on-surface-variant uppercase tracking-wider">
+              Educational Tech
+            </span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm font-medium text-secondary bg-secondary-container/30 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span>ETA: 14 mins (3.2 mi)</span>
+</div>
+</div>
+<!-- Cargo Item Title & Photo Context -->
+<div class="flex items-start gap-space-md mb-space-md">
+<img class="w-20 h-20 rounded-lg object-cover flex-shrink-0 bg-surface-container" data-alt="Row of clean refurbished desktop computers with slim black monitors and peripheral keyboards carefully packed in safe transport sleeves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApdKf9hmD5VmODN54OTsLocEEiH_s28ZrUM7J3U3cJeu9hDpnbTBhzpGlH6D-YtwHrd_jJ5EhA9eBcpw6ejELxIP13AS8Y0yLbKnXLhy4g3MnevoJnJk0tHMwlGcakUvpwZ070ru0WLWw2Y3uQhyaXm-2o_8UxsYP2mSow3XOgkHavwxn6885xBn1XVM6NM4g_qw5J4UXB8HmNt2qYomEBwQqMwh0oV9ZY3eiqdGNh"/>
+<div class="flex-1 min-w-0">
+<h2 class="font-headline-md text-headline-md text-primary font-bold truncate">4 Refurbished Desktop Computers &amp; Monitors</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">High-impact hardware gift for student media lab • Signature mandatory.</p>
+<div class="flex items-center gap-space-xs mt-2">
+<span class="font-badge-micro text-badge-micro bg-primary-container text-on-primary px-1.5 py-0.5 rounded font-semibold">Hardware Escrow</span>
+<span class="font-badge-micro text-badge-micro bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded font-semibold">Tag #TRH-0442</span>
+</div>
+</div>
+</div>
+<!-- Transfer Trajectory Details -->
+<div class="bg-surface-container-low p-space-md rounded-lg mb-space-md flex flex-col gap-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px] mt-0.5">radio_button_checked</span>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm uppercase text-outline">Origin</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium truncate">Tech Recycled Hub (Central Warehouse)</p>
+</div>
+</div>
+<div class="ml-2 pl-3 border-l-2 border-dashed border-outline-variant py-1">
+<span class="font-badge-micro text-badge-micro text-outline">In Transit with Courier Elena</span>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">location_on</span>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm uppercase text-outline">Destination Recipient</span>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Hope Youth Learning Center</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">108 Elm St., Entrance C (Youth Labs Coordinator Office)</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-surface-container-highest mt-space-2xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">draw</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Authorized Recipient: Sarah Chen</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold hover:underline" href="tel:5550198877">
+<span class="material-symbols-outlined text-[16px]">call</span>
+              +1 (555) 019-8877
+            </a>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-xs flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<button class="w-full sm:w-auto font-label-md text-label-md text-error hover:bg-error-container/20 px-space-sm py-2 rounded-lg transition-colors flex items-center justify-center gap-1" onclick="openFailureModal()">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+          Report Delivery Failure
+        </button>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-lg py-2.5 bg-secondary text-on-secondary rounded-lg font-label-md text-label-md font-semibold hover:bg-secondary/90 active:scale-95 transition-all shadow-sm" onclick="openDeliveryModal()">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+          Mark as Delivered
+        </button>
+</div>
+</div>
+</div>
+<!-- Operational Field Map Preview & Route Waypoints Strip -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-2xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Field Route Trajectory</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live telemetry and geofenced handoff checkpoints</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm bg-surface-container px-space-sm py-1 rounded-full text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">satellite_alt</span>
+          GPS Sync: 4s ago
+        </span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md items-center">
+<div class="lg:col-span-2">
+<div class="w-full h-64 bg-cover bg-center rounded-xl shadow-inner relative flex items-end p-space-md" data-location="Westside Community Pantry, 442 Market St, San Francisco, CA" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3YCbXsZEB7JzekLnCFf7NZlaJHdl8x1kyoxqdwnvmYVnHfk1PCGy1s5nXwy_ZmektbHaHzlzGsxIUlFnlQ01NGInMUUHnfP5RtoPTJCIbzINScjINq8S5e91YE6X-9ZvRFktw_mAltu9JcBF67WRfT8ond0jxyMYj_yhhe4OpaDjVur5nXd3IME7Rk0WDYy4o-DbwDwJ-l3u2y-nKQGyAYvUE7fW-y4P5wXiXUdf9')">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-space-xs rounded-lg shadow-sm flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim animate-ping"></span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Vehicle Cargo: 72% Capacity</span>
+</div>
+<span class="text-outline-variant">|</span>
+<span class="font-label-sm text-label-sm text-outline">Next: 108 Elm St. Drop-off</span>
+</div>
+</div>
+</div>
+<!-- Sequence Steps -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-badge-micro font-bold">1</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block">Pantry Pickup (25 Boxes)</span>
+<span class="font-body-sm text-body-sm text-outline">Departing Bay 2 Loading Dock</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-secondary font-bold">Pending</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-badge-micro font-bold">2</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block">Tech Hub Delivery (4 PCs)</span>
+<span class="font-body-sm text-body-sm text-outline">Youth Center Reception</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-amber-600 font-bold">En Route</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm opacity-60">
+<div class="w-6 h-6 rounded-full bg-outline-variant text-on-surface flex items-center justify-center font-badge-micro font-bold">3</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block">North District Battery Drop</span>
+<span class="font-body-sm text-body-sm text-outline">EcoRecycle Station #09</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-outline font-bold">Queued</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Completed Runs Audit Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Recent Completed Runs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Permanent record of chain-of-custody transfer receipts and volunteer verifications</p>
+</div>
+<button class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:underline">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export Shift Log (.CSV)
+      </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant">
+<th class="py-space-sm px-space-md font-label-sm text-label-sm uppercase tracking-wider rounded-l-lg">Run ID &amp; Item Details</th>
+<th class="py-space-sm px-space-md font-label-sm text-label-sm uppercase tracking-wider">Routing Nodes</th>
+<th class="py-space-sm px-space-md font-label-sm text-label-sm uppercase tracking-wider">Completed Timestamp</th>
+<th class="py-space-sm px-space-md font-label-sm text-label-sm uppercase tracking-wider">Verification Signoff</th>
+<th class="py-space-sm px-space-md font-label-sm text-label-sm uppercase tracking-wider text-right rounded-r-lg">Milestone Award</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">kitchen</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">Commercial Freezer Unit</span>
+<span class="font-badge-micro text-badge-micro text-outline font-mono">#DSP-77402</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface block">Metro Diner Surplus → South Harvest Kitchen</span>
+<span class="font-label-sm text-label-sm text-outline">Heavy Goods (Two-person lift)</span>
+</td>
+<td class="py-space-md px-space-md font-mono text-body-sm text-on-surface">
+              Today, 11:24 AM
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                Signed by Chef Mateo
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed-dim/30 text-on-secondary-fixed font-badge-micro text-badge-micro font-bold uppercase">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+                +45kg CO2 Diverted
+              </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">Mobility Ramps &amp; 3 Wheelchairs</span>
+<span class="font-badge-micro text-badge-micro text-outline font-mono">#DSP-77398</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface block">St. Jude Care Annex → Golden Age Center</span>
+<span class="font-label-sm text-label-sm text-outline">Priority Care Allocation</span>
+</td>
+<td class="py-space-md px-space-md font-mono text-body-sm text-on-surface">
+              Yesterday, 4:45 PM
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                Signed by Nurse Julie
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-badge-micro text-badge-micro font-bold uppercase">
+<span class="material-symbols-outlined text-[14px]">volunteer_activism</span>
+                Community Hero 5★
+              </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">180 Children’s STEM Books</span>
+<span class="font-badge-micro text-badge-micro text-outline font-mono">#DSP-77382</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface block">Lincoln High Library → Oak Grove Daycare</span>
+<span class="font-label-sm text-label-sm text-outline">Educational Recirculation</span>
+</td>
+<td class="py-space-md px-space-md font-mono text-body-sm text-on-surface">
+              Yesterday, 1:15 PM
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                Signed by Director Adams
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed-dim/30 text-on-secondary-fixed font-badge-micro text-badge-micro font-bold uppercase">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+                Literacy Advocate
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- MODAL: Confirmation for Mark as Delivered -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden" id="modal-delivery">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-lg p-space-xl mx-4 transform transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Confirm Delivery Completion</h3>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="closeDeliveryModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+        You are verifying chain-of-custody transfer for <strong class="text-on-surface">4 Refurbished Desktop Computers &amp; Monitors</strong> to <strong class="text-on-surface">Hope Youth Learning Center</strong>.
+      </p>
+<div class="bg-surface-container-low p-space-md rounded-lg mb-space-md">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Recipient Signoff Name</label>
+<input class="w-full bg-surface-container-lowest px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/30 mb-space-sm" type="text" value="Sarah Chen (Center Lead)"/>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Transfer Inspection Notes (Optional)</label>
+<textarea class="w-full bg-surface-container-lowest px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30" placeholder="e.g. All 4 cables and power supplies checked upon handover..." rows="2"></textarea>
+</div>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md" onclick="closeDeliveryModal()">Cancel</button>
+<button class="px-space-lg py-2 bg-secondary text-on-secondary rounded-lg font-label-md text-label-md font-semibold hover:bg-secondary/90 transition-all" onclick="confirmDelivered()">
+          Authorize &amp; Complete Transfer
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: Delivery Failure / Problem Ticket -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden" id="modal-failure">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-lg p-space-xl mx-4 transform transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-error font-bold">Report Transfer Failure</h3>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="closeFailureModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+        Please specify why this delivery cannot be signed off right now so field dispatch can re-route or assist you.
+      </p>
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="text-secondary focus:ring-secondary" name="failure-reason" type="radio" value="unavailable"/>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">Recipient Unavailable / Facility Closed</span>
+<span class="font-body-sm text-body-sm text-outline">Doors locked, recipient not answering authorized contact phone.</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-secondary focus:ring-secondary" name="failure-reason" type="radio" value="address"/>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">Address Mismatch or Relocated</span>
+<span class="font-body-sm text-body-sm text-outline">Waypoint does not match facility entrance or facility moved.</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-secondary focus:ring-secondary" name="failure-reason" type="radio" value="damaged"/>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">Damaged Goods / Packaging Compromised</span>
+<span class="font-body-sm text-body-sm text-outline">Equipment defective or cargo suffered transit breakdown.</span>
+</div>
+</label>
+</div>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md" onclick="closeFailureModal()">Dismiss</button>
+<button class="px-space-lg py-2 bg-error text-on-error rounded-lg font-label-md text-label-md font-semibold hover:bg-error/90 transition-all" onclick="submitFailure()">
+          Submit Incident Ticket
+        </button>
+</div>
+</div>
+</div>
+<script>
+    function toggleDuty(checkbox) {
+      const label = document.getElementById('duty-label');
+      const dot = document.getElementById('duty-dot');
+      if (checkbox.checked) {
+        label.innerHTML = `<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse" id="duty-dot"></span> Active on Duty`;
+      } else {
+        label.innerHTML = `<span class="w-2 h-2 rounded-full bg-outline" id="duty-dot"></span> Standing By (Off Duty)`;
+      }
+    }
+
+    function switchTab(type) {
+      const tabs = ['all', 'pickup', 'delivery', 'completed'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        if (btn) {
+          if (t === type) {
+            btn.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold bg-primary-container text-on-primary shadow-sm transition-all';
+          } else {
+            btn.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all';
+          }
+        }
+      });
+
+      const cards = document.querySelectorAll('.task-card');
+      cards.forEach(card => {
+        if (type === 'all') {
+          card.classList.remove('hidden');
+        } else if (type === 'pickup') {
+          if (card.classList.contains('pickup')) card.classList.remove('hidden');
+          else card.classList.add('hidden');
+        } else if (type === 'delivery') {
+          if (card.classList.contains('delivery')) card.classList.remove('hidden');
+          else card.classList.add('hidden');
+        } else if (type === 'completed') {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function completePickup(button) {
+      button.innerHTML = `<span class="material-symbols-outlined text-[18px]">verified</span> Picked Up Successfully`;
+      button.className = 'w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-lg py-2.5 bg-secondary-container text-on-secondary-fixed-variant rounded-lg font-label-md text-label-md font-semibold cursor-default';
+      button.disabled = true;
+    }
+
+    function openDeliveryModal() {
+      document.getElementById('modal-delivery').classList.remove('hidden');
+    }
+
+    function closeDeliveryModal() {
+      document.getElementById('modal-delivery').classList.add('hidden');
+    }
+
+    function confirmDelivered() {
+      closeDeliveryModal();
+      const card = document.getElementById('card-delivery-2');
+      if (card) {
+        card.innerHTML = `
+          <div class="p-space-xl flex flex-col items-center justify-center text-center">
+            <div class="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center mb-space-sm">
+              <span class="material-symbols-outlined text-[28px]">check_circle</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary font-bold">Transfer Verified &amp; Signed</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1">
+              4 Refurbished Desktop Computers & Monitors have been signed off by Sarah Chen at Hope Youth Learning Center. Receipt appended to dispatch audit.
+            </p>
+          </div>
+        `;
+      }
+    }
+
+    function openFailureModal() {
+      document.getElementById('modal-failure').classList.remove('hidden');
+    }
+
+    function closeFailureModal() {
+      document.getElementById('modal-failure').classList.add('hidden');
+    }
+
+    function submitFailure() {
+      closeFailureModal();
+      alert('Incident ticket logged with central dispatch. Support will contact you shortly.');
+    }
+
+    function reportIssuePrompt(location) {
+      const reason = prompt('Please describe the pickup issue at ' + location + ':');
+      if (reason) {
+        alert('Pickup issue flagged to route dispatcher: "' + reason + '"');
+      }
+    }
+  </script>
+</div></main></div></body></html>

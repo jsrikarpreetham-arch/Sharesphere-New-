@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline":"#717973","secondary-fixed-dim":"#4edea3","secondary":"#006c49","inverse-primary":"#a5d0b9","on-primary":"#ffffff","on-tertiary-container":"#43ba8a","on-background":"#131b2e","tertiary-container":"#00452e","on-secondary-fixed-variant":"#005236","on-tertiary-fixed-variant":"#005137","on-surface":"#131b2e","on-error":"#ffffff","tertiary":"#002d1c","surface-container":"#eaedff","on-primary-fixed-variant":"#274e3d","on-secondary-container":"#00714d","primary":"#012d1d","surface-dim":"#d2d9f4","tertiary-fixed-dim":"#68dba9","outline-variant":"#c1c8c2","primary-fixed":"#c1ecd4","on-surface-variant":"#414844","on-tertiary":"#ffffff","error-container":"#ffdad6","on-error-container":"#93000a","on-tertiary-fixed":"#002114","surface-tint":"#3f6653","primary-fixed-dim":"#a5d0b9","inverse-on-surface":"#eef0ff","surface-container-highest":"#dae2fd","tertiary-fixed":"#85f8c4","error":"#ba1a1a","secondary-container":"#6cf8bb","inverse-surface":"#283044","primary-container":"#1b4332","background":"#faf8ff","surface-container-high":"#e2e7ff","on-secondary-fixed":"#002113","surface-variant":"#dae2fd","on-primary-fixed":"#002114","on-primary-container":"#86af99","surface":"#faf8ff","on-secondary":"#ffffff","surface-bright":"#faf8ff","surface-container-lowest":"#ffffff","surface-container-low":"#f2f3ff","secondary-fixed":"#6ffbbe"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"1rem","margin-mobile":"1rem","space-2xl":"3rem","space-xl":"2rem","space-xs":"0.5rem","space-md":"1rem","margin":"2rem","gutter":"1.5rem","space-sm":"0.75rem","space-2xs":"0.25rem","space-lg":"1.5rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"display-stat-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"badge-micro":["Plus Jakarta Sans"],"display-stat":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-stat-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"badge-micro":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display-stat":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 flex items-center gap-space-sm px-space-lg bg-surface-container-lowest"><img alt="ShareSphere Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBRDhZNb6GBfICdxuuLVDPExKuSEW2NyTPbkO4gld0TbesFP3b2-CPApwZkm6oblDHGRWE1eJZZEgzz0TSB4SynDcRfpZ4bO0p9vipOU1KzfdUQTp31lGWZ1s6gX5IMaZ-FfBDdXbcybJw2WxLLOD4xq8dLjl9HcPaguemfLCbK7Ha_j0tRKfYP6eyp31SHBYIuIW5-ZQvFgrsn8NiCDvZClt5Gn2Tsvxbo2CTcU5k_"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold leading-none tracking-tight">ShareSphere</span><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary mt-space-2xs">Resource Loop</span></div></div><nav class="flex-1 overflow-y-auto px-space-md py-space-md flex flex-col gap-space-lg" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="flex flex-col gap-space-2xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-2xs">Main Dashboard</span><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Analytics</span></a></div><div class="flex flex-col gap-space-2xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-2xs">Resource Sharing</span><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="donations" href="#"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-body-md text-body-md">Donations</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm" data-path="available-resources" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Available Resources</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="allocations" href="#"><span class="material-symbols-outlined text-[20px]">sync_alt</span><span class="font-body-md text-body-md">Allocations</span></a></div><div class="flex flex-col gap-space-2xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-2xs">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pickups-and-deliveries" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-body-md text-body-md">Pickups &amp; Deliveries</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="volunteer-tasks" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span class="font-body-md text-body-md">Volunteer Tasks</span></a></div><div class="flex flex-col gap-space-2xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-2xs">Community &amp; Settings</span><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="members" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-md text-body-md">Members</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Profile &amp; Settings</span></a></div></nav><div class="p-space-md bg-surface-container-low"><div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></div><div class="flex flex-col flex-1 min-w-0"><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Civic Hub 04</span><span class="font-badge-micro text-badge-micro text-secondary truncate">Network Operational</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-outline text-[20px]">search</span><input class="w-72 h-10 pl-9 pr-12 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all" placeholder="Search inventory, claims, hubs..." type="text"/><span class="absolute right-space-sm font-badge-micro text-badge-micro bg-surface-container-highest px-space-2xs py-0.5 rounded text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold"><span class="w-2 h-2 rounded-full bg-secondary"></span>System Admin</span></div><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgPnkwm6G1O2XkTuHo-N2G9VhLu0GKM161s-EkCl67s_Sgayiq5Mu7quPyVttYlZAXtxlLKUT_ktKqmaGJtKQ8rS-D7PPxIJQJbSd3qQo8gDe8_IPW6ApFsvoePS1Y7iSmd13JxklrVH6aGfOGmNSk1RSuVL5L118mUkGAz9cu_bOTfrA6rd3P7YgxR8YpqTN0SRVHhzLv3-xApk_QfIep5IyB0pAKjCmUFL26Z3Yl"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Elena Rostova</span><span class="font-label-sm text-label-sm text-outline">Coordinator</span></div></div><a class="flex items-center justify-center w-8 h-8 rounded-lg text-outline hover:text-error hover:bg-error-container/20 transition-colors" href="#" title="Logout"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></header><main class="w-full pt-16 px-space-xl py-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Utility Context Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs text-secondary mb-space-2xs">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Civic Beneficiary Portal • Verified ID #RC-8492</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">Recipient Resource Center</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">Browse verified circular donations, submit requisition tickets with dynamic priority weighting, and monitor real-time distribution status.</p>
+</div>
+<!-- Quick Stats Metric Band -->
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-md bg-surface-container-lowest px-space-lg py-space-sm rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold">Active Requests</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">3 <span class="text-secondary font-label-md text-label-md font-medium">In Queue</span></span>
+</div>
+</div>
+<div class="flex items-center gap-space-md bg-surface-container-lowest px-space-lg py-space-sm rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">inventory</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold">Received Resources</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">19 <span class="text-secondary font-label-md text-label-md font-medium">• 412 kg</span></span>
+</div>
+</div>
+<div class="flex items-center gap-space-md bg-surface-container-lowest px-space-lg py-space-sm rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold">Verification</span>
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">Current <span class="text-outline font-label-sm text-label-sm font-normal">(0 flags)</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Grid: Left Catalog + Right Quick-Requisition Card -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl items-start">
+<!-- Section 1: Catalog (Left 8 Cols) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Catalog Controls & Filters -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">storefront</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Available Community Resources</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-space-sm py-1 rounded-full font-medium">Showing 6 Verified Lots</span>
+</div>
+<div class="flex flex-col md:flex-row gap-space-md items-stretch">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 transition-all" id="catalogSearch" placeholder="Search by item, batch tag, district, or donor organization..." type="text"/>
+</div>
+<!-- Category Chips Filter -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0" id="categoryFilterContainer">
+<button class="cat-filter-btn px- space-sm px-3 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary shadow-xs" data-category="all">All</button>
+<button class="cat-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-category="Food Surplus">Food Surplus</button>
+<button class="cat-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-category="Furniture">Furniture</button>
+<button class="cat-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-category="Clothing">Clothing</button>
+<button class="cat-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-category="Medical &amp; Care">Medical &amp; Care</button>
+</div>
+</div>
+</div>
+<!-- Resource Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg" id="resourceCardsGrid">
+<!-- Card 1 -->
+<div class="resource-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden" data-category="Food Surplus" data-donor="Cascadia Food Bank" data-id="RES-01" data-loc="East River Hub (0.8 mi)" data-title="Chilled Organic Produce Crates">
+<div class="relative h-44 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Neatly arranged wooden crates filled with freshly harvested seasonal vegetables like carrots, cabbages, and squash in a bright sustainable community storage depot with clean lighting and soft emerald accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZwXAh1kDRoQG63nmjmeHUTYdGR_bwCpD7jThDI4dyWCqC23CPdDLtnODXEcdysSSsVpcwZDxgfmFyAe8nOnJRWfiUiRz5YTva7oU6NJ7Lbo8SCZYrm-oD750GuxhjEIBGFidUPdSxnN3EHEwzqLsg_n6Sf4nCyEpw11RRLpgG0TqMDfxk8C6We9QOq6wUJ1fm35b0IuAqYgUHoFpW3zJ4IJKHHXvB5_CxZEgC6XsV"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-secondary font-label-sm text-label-sm font-semibold shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Food Surplus
+            </div>
+<div class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded-md">
+              Fresh Batch • Verified
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Chilled Organic Produce Crates</h3>
+<span class="font-label-sm text-label-sm font-bold bg-secondary-container/40 text-on-secondary-fixed-variant px-2 py-0.5 rounded-full shrink-0">14 Crates Avail</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs line-clamp-2">Crisp greens, root vegetables, and seasonal orchard fruits packed in food-grade sanitised bins ready for institutional meal programs.</p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> East River Hub (0.8 mi)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">verified</span> Grade A Fresh</span>
+</div>
+<button class="w-full mt-2 bg-primary hover:bg-primary-container text-on-primary h-10 rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all active:scale-[0.99]" onclick="selectForRequest('Chilled Organic Produce Crates', 14, 'Food Surplus', 'Cascadia Food Bank')">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+                Request Item
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="resource-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden" data-category="Medical &amp; Care" data-donor="Metro Health Trust" data-id="RES-02" data-loc="Central Depot 02 (1.4 mi)" data-title="Sterile Hygiene &amp; First-Aid Bundles">
+<div class="relative h-44 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Stacked medical grade sealed disaster relief hygiene kits and basic wound care packs organized cleanly in a minimalist modern logistics center with subtle green ambient lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnO2uW53DygrZm7s90YAWfNs3Lu9uyIcB-QHdM9TZU1UI6F64IwduORiUTKRnhMszSInD0zwC6EJnr_MpfZgRFn8yRPJH9tMzpf6r4-BhXW3-8IJ-YAlzsidgOEwH9nMXTyvDs88FRRZYBavhbmTKAEDZ1oLxDD7vdfywPrMFFWwZtGRuyd4UjI6hWv49zjU3iouiJED4tpE-mkKrZPB8Y38AtZSwOvqhVe4HlUuoB"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-secondary font-label-sm text-label-sm font-semibold shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Medical &amp; Care
+            </div>
+<div class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded-md">
+              Emergency Priority
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Sterile Hygiene &amp; First-Aid Bundles</h3>
+<span class="font-label-sm text-label-sm font-bold bg-secondary-container/40 text-on-secondary-fixed-variant px-2 py-0.5 rounded-full shrink-0">45 Kits Avail</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs line-clamp-2">Sanitary wipes, antiseptic packs, emergency thermal foil, and pediatric hygiene essentials in hermetically sealed parcels.</p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Central Depot 02 (1.4 mi)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">lock_reset</span> Factory Sealed</span>
+</div>
+<button class="w-full mt-2 bg-primary hover:bg-primary-container text-on-primary h-10 rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all active:scale-[0.99]" onclick="selectForRequest('Sterile Hygiene &amp; First-Aid Bundles', 45, 'Medical &amp; Care', 'Metro Health Trust')">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+                Request Item
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="resource-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden" data-category="Furniture" data-donor="Civic University Loop" data-id="RES-03" data-loc="South Warehouse (3.1 mi)" data-title="Modular Solid Oak Study Desks">
+<div class="relative h-44 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Refurbished light Scandinavian natural wood student desks arranged in an airy community warehouse with polished concrete floors and abundant soft daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTvZjnItBTsrMHYDdEMupU4XzHDa3TsvygNLkACJn0XA2yBD1Ir09hFISnppfGRYp05rSuYgp0R_ErL7MQwq-fWobJ1re-Sk4HIYWz-zMWoUq4KQh9ctbEkdzx8Pl8szINUkE02t3nEX0oaGNVx-LhyT95HTeMMOMDo6lM-pOqNxV-aLnPFIo3RCtu89pFlLS9evn6SB7E5SCubbwr_MyV2MV4X4OnrV0s1WjtxRPq"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-secondary font-label-sm text-label-sm font-semibold shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Furniture
+            </div>
+<div class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded-md">
+              Restored • Vetted
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Modular Solid Oak Study Desks</h3>
+<span class="font-label-sm text-label-sm font-bold bg-secondary-container/40 text-on-secondary-fixed-variant px-2 py-0.5 rounded-full shrink-0">8 Units Avail</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs line-clamp-2">Reconditioned university classroom desks with cable grommets, durable scratch-resistant coating, and steel frame supports.</p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> South Warehouse (3.1 mi)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Like New</span>
+</div>
+<button class="w-full mt-2 bg-primary hover:bg-primary-container text-on-primary h-10 rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all active:scale-[0.99]" onclick="selectForRequest('Modular Solid Oak Study Desks', 8, 'Furniture', 'Civic University Loop')">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+                Request Item
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="resource-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden" data-category="Clothing" data-donor="Northern Textile Mutual" data-id="RES-04" data-loc="Civic Hub 04 (0.4 mi)" data-title="Thermal Winter Coats &amp; Boots Lot">
+<div class="relative h-44 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Hanger racks of clean heavy duty insulated winter coats, warm parkas, and lined cold weather boots in organized communal supply intake area." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0goVdczD0RTqHOdmIajZCT27a6vZ6z4sXW21EYUbxS6Tudnyx4kRyoLS_-wa7oHW3P_okZ1Ou_smo08RjSk1BuGrV2_nAAg8P1f9sQz1ETsQDUOIVf4mow2BuwO4oiN3V38s9VqvyqeQ8aX4JMoX11Mjt-uiCAwCKowdD1iUXi5TP16vko8V3rQUx50sbXAEE6gj09fBA2l1kBvnOM1ljiE1EaOH33lr4pybdzHnB"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-secondary font-label-sm text-label-sm font-semibold shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Clothing
+            </div>
+<div class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded-md">
+              Cold Season Ready
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Thermal Winter Coats &amp; Boots Lot</h3>
+<span class="font-label-sm text-label-sm font-bold bg-secondary-container/40 text-on-secondary-fixed-variant px-2 py-0.5 rounded-full shrink-0">28 Pcs Avail</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs line-clamp-2">Laundered, weather-tested parkas, gloves, and waterproof work boots sorted by adult sizes S through 3XL.</p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Civic Hub 04 (0.4 mi)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">wash</span> Sanitized &amp; Graded</span>
+</div>
+<button class="w-full mt-2 bg-primary hover:bg-primary-container text-on-primary h-10 rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all active:scale-[0.99]" onclick="selectForRequest('Thermal Winter Coats &amp; Boots Lot', 28, 'Clothing', 'Northern Textile Mutual')">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+                Request Item
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Create Resource Request (Right 4 Cols) -->
+<div class="xl:col-span-4 sticky top-20">
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<!-- Header Decor Gradient Pill -->
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">assignment_add</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold leading-tight">Create Requisition</h2>
+<span class="font-label-sm text-label-sm text-outline">Section 2 • Direct Allocation Ticket</span>
+</div>
+</div>
+<span class="bg-secondary-container/40 text-on-secondary-fixed-variant font-badge-micro text-badge-micro px-2 py-1 rounded uppercase font-bold">Live Form</span>
+</div>
+<form class="flex flex-col gap-space-md" id="resourceRequestForm" onsubmit="handleFormSubmit(event)">
+<!-- Selected Resource Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold flex items-center justify-between">
+              Target Resource
+              <span class="text-secondary font-semibold lowercase" id="maxAvailNotice">click any catalog card</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[20px]">category</span>
+<input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 transition-all font-semibold" id="targetResourceInput" placeholder="Choose from catalog or type item..." required="" type="text" value="Chilled Organic Produce Crates"/>
+</div>
+</div>
+<!-- Quantity Row -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Required Quantity</label>
+<span class="font-label-sm text-label-sm text-outline" id="unitDescriptor">Units / Packages</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors font-bold text-lg" onclick="adjustQty(-1)" type="button">-</button>
+<input class="h-10 flex-1 rounded-lg bg-surface-container-low text-center font-headline-sm text-headline-sm text-primary font-bold focus:outline-none focus:ring-2 focus:ring-secondary/40" id="requestQuantity" max="50" min="1" type="number" value="4"/>
+<button class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors font-bold text-lg" onclick="adjustQty(1)" type="button">+</button>
+</div>
+</div>
+<!-- Priority Level Selector (1-5 with explicit badges) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Priority Triage Level</label>
+<span class="font-label-sm text-label-sm font-bold text-secondary" id="priorityLabelText">3 - Moderate Need</span>
+</div>
+<input id="priorityValue" type="hidden" value="3"/>
+<div class="grid grid-cols-5 gap-1.5">
+<!-- 1 Low -->
+<button class="priority-btn p-2 rounded-lg text-center flex flex-col items-center justify-center gap-0.5 transition-all bg-surface-container text-on-surface-variant hover:opacity-80" data-level="1" onclick="setPriority(1, '1 - Low (Routine Restock)', 'bg-surface-container text-on-surface-variant')" type="button">
+<span class="font-bold text-sm leading-none">1</span>
+<span class="font-badge-micro text-[9px] uppercase tracking-tighter">Low</span>
+</button>
+<!-- 2 Standard -->
+<button class="priority-btn p-2 rounded-lg text-center flex flex-col items-center justify-center gap-0.5 transition-all bg-surface-container text-on-surface-variant hover:opacity-80" data-level="2" onclick="setPriority(2, '2 - Standard (Next Cycle)', 'bg-surface-container text-on-surface-variant')" type="button">
+<span class="font-bold text-sm leading-none">2</span>
+<span class="font-badge-micro text-[9px] uppercase tracking-tighter">Standard</span>
+</button>
+<!-- 3 Moderate (Default Active) -->
+<button class="priority-btn p-2 rounded-lg text-center flex flex-col items-center justify-center gap-0.5 transition-all bg-secondary text-on-secondary shadow-sm" data-level="3" onclick="setPriority(3, '3 - Moderate Need', 'bg-secondary text-on-secondary shadow-sm')" type="button">
+<span class="font-bold text-sm leading-none">3</span>
+<span class="font-badge-micro text-[9px] uppercase tracking-tighter">Moderate</span>
+</button>
+<!-- 4 Urgent -->
+<button class="priority-btn p-2 rounded-lg text-center flex flex-col items-center justify-center gap-0.5 transition-all bg-surface-container text-on-surface-variant hover:opacity-80" data-level="4" onclick="setPriority(4, '4 - Urgent (Within 24h)', 'bg-amber-100 text-amber-900')" type="button">
+<span class="font-bold text-sm leading-none">4</span>
+<span class="font-badge-micro text-[9px] uppercase tracking-tighter">Urgent</span>
+</button>
+<!-- 5 Critical Emergency -->
+<button class="priority-btn p-2 rounded-lg text-center flex flex-col items-center justify-center gap-0.5 transition-all bg-surface-container text-on-surface-variant hover:opacity-80" data-level="5" onclick="setPriority(5, '5 - Critical Emergency', 'bg-error text-on-error')" type="button">
+<span class="font-bold text-sm leading-none">5</span>
+<span class="font-badge-micro text-[9px] uppercase tracking-tighter">Critical</span>
+</button>
+</div>
+</div>
+<!-- Fulfillment Preference Radio Buttons -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Fulfillment Preference</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<label class="flex items-center gap-2 p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="accent-secondary h-4 w-4" name="fulfillment" type="radio" value="delivery"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Mutual Delivery</span>
+<span class="font-badge-micro text-badge-micro text-outline">Via courier van</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="accent-secondary h-4 w-4" name="fulfillment" type="radio" value="pickup"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Self-Pickup</span>
+<span class="font-badge-micro text-badge-micro text-outline">Civic Hub 04</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Need Justification / Case Notes -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold flex items-center justify-between">
+              Need Justification &amp; Notes
+              <span class="font-badge-micro text-badge-micro text-outline">Audited by Case Workers</span>
+</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 transition-all resize-none" id="needJustification" placeholder="Provide brief context (e.g., shelter bed capacity, dietary urgency, or scheduled distribution date)..." required="" rows="3">Serving 35 unhoused residents in tonight's warm dinner distribution cycle. Kitchen requires fresh staples before 17:00.</textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-11 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-[0.99] mt-1" id="submitBtn" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Resource Request</span>
+</button>
+<div class="hidden p-space-sm rounded-lg bg-secondary-container/40 text-on-secondary-fixed-variant font-label-sm text-label-sm flex items-center gap-2" id="submitNotice">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+<span>Requisition submitted! Added to My Request History.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Section 3: My Request History Data Table -->
+<div class="mt-space-2xl bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest border-b border-surface-container">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">history</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">My Request History</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time status tracking for institutional requisitions and community dispatches.</p>
+</div>
+<!-- Quick Status Filters -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0">
+<button class="history-tab px-3 py-1 rounded-md font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface" onclick="filterHistory('all')">All (4)</button>
+<button class="history-tab px-3 py-1 rounded-md font-label-sm text-label-sm font-medium text-outline hover:bg-surface-container" onclick="filterHistory('Pending Review')">Pending</button>
+<button class="history-tab px-3 py-1 rounded-md font-label-sm text-label-sm font-medium text-outline hover:bg-surface-container" onclick="filterHistory('Approved &amp; Allocated')">Allocated</button>
+<button class="history-tab px-3 py-1 rounded-md font-label-sm text-label-sm font-medium text-outline hover:bg-surface-container" onclick="filterHistory('Out for Delivery')">En Route</button>
+<button class="history-tab px-3 py-1 rounded-md font-label-sm text-label-sm font-medium text-outline hover:bg-surface-container" onclick="filterHistory('Fulfilled')">Fulfilled</button>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="historyTable">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-lg font-semibold">Request ID</th>
+<th class="py-3 px-space-md font-semibold">Resource Name</th>
+<th class="py-3 px-space-md font-semibold text-center">Requested Qty</th>
+<th class="py-3 px-space-md font-semibold">Priority</th>
+<th class="py-3 px-space-md font-semibold">Submitted</th>
+<th class="py-3 px-space-md font-semibold">Status</th>
+<th class="py-3 px-space-lg font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-surface-container" id="historyTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-status="Out for Delivery">
+<td class="py-3.5 px-space-lg font-mono font-bold text-primary">#REQ-9921</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-semibold text-on-surface">Emergency Cot Beds (Foldable)</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-outline block pl-3">Dest: Shelter East Bay Wing</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold">12 units</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Level 5 Critical
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-outline">Today, 08:30 AM</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">local_shipping</span> Out for Delivery
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" onclick="viewRequestDetails('#REQ-9921')" title="Track Courier">
+<span class="material-symbols-outlined text-[18px]">map</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" onclick="viewRequestDetails('#REQ-9921')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-status="Approved &amp; Allocated">
+<td class="py-3.5 px-space-lg font-mono font-bold text-primary">#REQ-9874</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-semibold text-on-surface">Bulk Dry Oats &amp; Legumes</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-outline block pl-3">Dest: Community Pantry 03</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold">8 sacks (200kg)</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Level 4 Urgent
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-outline">Yesterday, 14:15</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Approved &amp; Allocated
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" onclick="viewRequestDetails('#REQ-9874')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+<button class="p-1 rounded hover:bg-error-container/40 text-outline hover:text-error transition-colors" onclick="withdrawRequest(this, '#REQ-9874')" title="Withdraw Request">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-status="Pending Review">
+<td class="py-3.5 px-space-lg font-mono font-bold text-primary">#REQ-9850</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-semibold text-on-surface">Children's Thermal Jackets (Mixed)</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-outline block pl-3">Dest: Family Shelter Intake</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold">15 units</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Level 3 Moderate
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-outline">Oct 24, 09:12</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span> Pending Review
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" onclick="viewRequestDetails('#REQ-9850')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+<button class="p-1 rounded hover:bg-error-container/40 text-outline hover:text-error transition-colors" onclick="withdrawRequest(this, '#REQ-9850')" title="Withdraw Request">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-status="Fulfilled">
+<td class="py-3.5 px-space-lg font-mono font-bold text-primary">#REQ-9710</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-semibold text-on-surface">Sanitary Water Filters &amp; Jerrycans</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-outline block pl-3">Dest: North Encampment Station</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold">6 sets</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Level 5 Critical
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-outline">Oct 21, 11:00</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span> Fulfilled &amp; Signed
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" onclick="viewRequestDetails('#REQ-9710')" title="Receipt &amp; Signature">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State Container (Hidden by default) -->
+<div class="hidden p-space-2xl flex flex-col items-center justify-center text-center" id="historyEmptyState">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-outline mb-2">
+<span class="material-symbols-outlined text-[28px]">search_off</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold">No Requisitions Found</p>
+<p class="font-body-sm text-body-sm text-outline max-w-sm">No historical requests match this status filter category.</p>
+</div>
+</div>
+<!-- Interactive Slide-out / Modal Info View -->
+<div class="fixed inset-0 bg-primary/20 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4" id="modalBackdrop">
+<div class="bg-surface-container-lowest max-w-md w-full rounded-xl shadow-2xl p-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">feed</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="modalReqId">#REQ-9921</span>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container hover:text-on-surface" onclick="closeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm text-body-sm">
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-outline">Assigned Hub:</span>
+<span class="font-semibold text-on-surface">Civic Hub 04 (Central Logistics)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-outline">Driver / Courier:</span>
+<span class="font-semibold text-on-surface">Marcus Vance (Van SS-03)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-outline">ETA:</span>
+<span class="font-semibold text-secondary">~38 minutes</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<span class="text-outline font-label-sm text-label-sm uppercase font-semibold">Manifest Note:</span>
+<p class="p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm">Palletized goods inspected by health supervisor. Electronic signature will be requested upon curb handoff.</p>
+</div>
+</div>
+<button class="w-full h-10 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-semibold transition-all" onclick="closeModal()">
+        Close Window
+      </button>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Behaviors -->
+<script>
+  // 1. Fill Quick-Requisition Card from Catalog Item
+  function selectForRequest(title, maxQty, category, donor) {
+    document.getElementById('targetResourceInput').value = title;
+    document.getElementById('maxAvailNotice').innerText = 'max available: ' + maxQty + ' units';
+    document.getElementById('requestQuantity').max = maxQty;
+    document.getElementById('requestQuantity').value = Math.min(2, maxQty);
+    
+    // Smooth scroll to request form on smaller viewports
+    if (window.innerWidth < 1280) {
+      document.getElementById('resourceRequestForm').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // 2. Quantity +/- Adjuster
+  function adjustQty(delta) {
+    const qtyInput = document.getElementById('requestQuantity');
+    let current = parseInt(qtyInput.value) || 1;
+    let max = parseInt(qtyInput.max) || 99;
+    let next = current + delta;
+    if (next >= 1 && next <= max) {
+      qtyInput.value = next;
+    }
+  }
+
+  // 3. Priority Level Selector Behavior
+  function setPriority(level, text, activeClass) {
+    document.getElementById('priorityValue').value = level;
+    document.getElementById('priorityLabelText').innerText = text;
+
+    // Reset all buttons
+    const buttons = document.querySelectorAll('.priority-btn');
+    buttons.forEach(btn => {
+      btn.className = 'priority-btn p-2 rounded-lg text-center flex flex-col items-center justify-center gap-0.5 transition-all bg-surface-container text-on-surface-variant hover:opacity-80';
+    });
+
+    // Style active button
+    const activeBtn = document.querySelector(`.priority-btn[data-level="${level}"]`);
+    if (activeBtn) {
+      activeBtn.className = `priority-btn p-2 rounded-lg text-center flex flex-col items-center justify-center gap-0.5 transition-all ${activeClass}`;
+    }
+  }
+
+  // 4. Catalog Category Filtering
+  const filterButtons = document.querySelectorAll('.cat-filter-btn');
+  const cards = document.querySelectorAll('.resource-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Toggle styles
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-xs');
+        btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      button.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      button.classList.add('bg-primary-container', 'text-on-primary', 'shadow-xs');
+
+      const selectedCat = button.getAttribute('data-category');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (selectedCat === 'all' || cardCat === selectedCat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 5. Catalog Search Filtering
+  const searchInput = document.getElementById('catalogSearch');
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    cards.forEach(card => {
+      const title = card.getAttribute('data-title').toLowerCase();
+      const loc = card.getAttribute('data-loc').toLowerCase();
+      const cat = card.getAttribute('data-category').toLowerCase();
+      const donor = card.getAttribute('data-donor').toLowerCase();
+      
+      if (title.includes(query) || loc.includes(query) || cat.includes(query) || donor.includes(query)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+
+  // 6. Handle Form Submission & Prepend to Table
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const item = document.getElementById('targetResourceInput').value;
+    const qty = document.getElementById('requestQuantity').value;
+    const priority = document.getElementById('priorityValue').value;
+    const notes = document.getElementById('needJustification').value;
+
+    const newId = '#REQ-' + Math.floor(1000 + Math.random() * 9000);
+
+    // Map priority badge
+    let priorityBadge = '';
+    if (priority == 5) {
+      priorityBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold"><span class="w-1.5 h-1.5 rounded-full bg-error"></span> Level 5 Critical</span>';
+    } else if (priority == 4) {
+      priorityBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-bold"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Level 4 Urgent</span>';
+    } else {
+      priorityBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Level ' + priority + ' Standard</span>';
+    }
+
+    const tableBody = document.getElementById('historyTableBody');
+    const newRow = document.createElement('tr');
+    newRow.className = 'hover:bg-surface-container-low/60 transition-colors bg-secondary-container/10';
+    newRow.setAttribute('data-status', 'Pending Review');
+    newRow.innerHTML = `
+      <td class="py-3.5 px-space-lg font-mono font-bold text-primary">${newId}</td>
+      <td class="py-3.5 px-space-md">
+        <div class="flex items-center gap-space-xs">
+          <span class="w-2 h-2 rounded-full bg-secondary"></span>
+          <span class="font-semibold text-on-surface">${item}</span>
+        </div>
+        <span class="font-badge-micro text-badge-micro text-outline block pl-3">Dest: Community Recipient Hub</span>
+      </td>
+      <td class="py-3.5 px-space-md text-center font-bold">${qty} units</td>
+      <td class="py-3.5 px-space-md">${priorityBadge}</td>
+      <td class="py-3.5 px-space-md text-outline">Just now</td>
+      <td class="py-3.5 px-space-md">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+          <span class="material-symbols-outlined text-[14px]">hourglass_empty</span> Pending Review
+        </span>
+      </td>
+      <td class="py-3.5 px-space-lg text-right">
+        <div class="inline-flex items-center gap-2">
+          <button onclick="viewRequestDetails('${newId}')" class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="View Details">
+            <span class="material-symbols-outlined text-[18px]">info</span>
+          </button>
+          <button onclick="withdrawRequest(this, '${newId}')" class="p-1 rounded hover:bg-error-container/40 text-outline hover:text-error transition-colors" title="Withdraw Request">
+            <span class="material-symbols-outlined text-[18px]">cancel</span>
+          </button>
+        </div>
+      </td>
+    `;
+
+    tableBody.insertBefore(newRow, tableBody.firstChild);
+
+    // Show temporary banner
+    const notice = document.getElementById('submitNotice');
+    notice.classList.remove('hidden');
+    setTimeout(() => {
+      notice.classList.add('hidden');
+    }, 4500);
+
+    // Scroll to table smoothly
+    document.getElementById('historyTable').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // 7. Withdraw Row
+  function withdrawRequest(btn, id) {
+    if (confirm('Withdraw and cancel ticket ' + id + '?')) {
+      const row = btn.closest('tr');
+      row.style.opacity = '0.3';
+      setTimeout(() => {
+        row.remove();
+      }, 300);
+    }
+  }
+
+  // 8. Filter History Table
+  function filterHistory(status) {
+    const tabs = document.querySelectorAll('.history-tab');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-surface-container', 'text-on-surface');
+      tab.classList.add('text-outline');
+    });
+    event.target.classList.add('bg-surface-container', 'text-on-surface');
+    event.target.classList.remove('text-outline');
+
+    const rows = document.querySelectorAll('#historyTableBody tr');
+    let visibleCount = 0;
+    rows.forEach(row => {
+      const rowStatus = row.getAttribute('data-status');
+      if (status === 'all' || rowStatus === status) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const empty = document.getElementById('historyEmptyState');
+    if (visibleCount === 0) {
+      empty.classList.remove('hidden');
+    } else {
+      empty.classList.add('hidden');
+    }
+  }
+
+  // 9. Details Modal
+  function viewRequestDetails(id) {
+    document.getElementById('modalReqId').innerText = id;
+    document.getElementById('modalBackdrop').classList.remove('hidden');
+  }
+  function closeModal() {
+    document.getElementById('modalBackdrop').classList.add('hidden');
+  }
+</script></main></div></body></html>
